@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <div>
-    <h3>{{ note.content }}</h3><span class="button is-small is-info">Like</span> <span class="button is-small is-danger">Delete</span>
+<div>
+    <h3>{{ note.content }}</h3><span class="button is-small is-primary" (click)='addHeartToNote(note?.hearts)'>Like</span> <span class="button is-small is-danger" (click)='deleteNote(note?.id)'>Delete</span>
     <p>{{ note.hearts || 0 }} person likes this.</p>
-  </div>
-</body>
-</html>
+</div>
